@@ -1,13 +1,17 @@
 // Complete the js code
 function Car(make, model) {
-	getMakeModel(){
-		return `${this.make} ${this.model}`
-}
+	this.make = make
+	this.model = model
+	this.getMakeModel = function(){
+		return this.make + " "  + this.model
+	}
 }
 
 function SportsCar extends Car(make, model, topSpeed) {
-	getTopSpeed(){
-		return this.topspeed
+		super()
+	this.topSpeed = topSpeed
+	this.getTopSpeed = function(){
+		return this.topSpeed
 	}
 }
 
